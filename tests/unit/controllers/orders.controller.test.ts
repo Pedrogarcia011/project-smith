@@ -14,5 +14,4 @@ describe('OrdersController', function () {
     res.json = sinon.stub().returns(res);
     sinon.restore();
   });
-
 });
