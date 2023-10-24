@@ -41,4 +41,5 @@ describe('ProductsService', function () {
   
     expect(responseProducts).to.be.deep.equal(listProduts);
   });
+  
 });
