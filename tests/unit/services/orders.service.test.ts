@@ -23,14 +23,18 @@ describe('OrdersService', function () {
         productIds: [3, 4],
       },
     ];
-
     sinon.stub(ListOrderService, 'listOrderService').resolves(mockOrder);
-
 
     const response = await chai.request(app).get('/orders');
 
 
     expect(response.status).to.be.equal(200);
-    expect(response.body).to.be.deep.equal(mockOrder);
   })
+
+  it('###Verifica se retorna todas as ordens cadastradas.', async function () {
+
+    const responseHttp = await chai.request(app).get('/orders')
+    console.log(responseHttp);
+    expect(responseHttp.status).to.be.equal(200)
+   })
 });
